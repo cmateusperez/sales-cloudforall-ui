@@ -11,8 +11,8 @@ export class ProductService {
 
  
   constructor(private http: HttpClient) {
-    this.productsUrl = 'http://localhost:8080/api/v1/product/getAll';
-    this.productAddUrl = 'http://localhost:8080/api/v1/product/add';
+    this.productsUrl = 'https://sales-cloudforall-back.herokuapp.com/api/v1/product/getAll';
+    this.productAddUrl = 'https://sales-cloudforall-back.herokuapp.com/api/v1/product/add';
   }
  
   public findAll(): Observable<Product[]> {

@@ -12,8 +12,8 @@ export class OrderService {
 
  
   constructor(private http: HttpClient) {
-    this.ordersDetailUrl = 'http://localhost:8080/api/v1/order/getAll';
-    this.orderAddUrl = 'http://localhost:8080/api/v1/order/add';
+    this.ordersDetailUrl = 'https://sales-cloudforall-back.herokuapp.com/api/v1/order/getAll';
+    this.orderAddUrl = 'https://sales-cloudforall-back.herokuapp.com/api/v1/order/add';
   }
  
   public findAll(): Observable<OrderDetail[]> {
