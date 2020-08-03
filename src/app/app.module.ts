@@ -7,12 +7,17 @@ import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductFormComponent } from './product-form/product-form.component';
 import { ProductService } from './service/product-service.service';
+import { OrderService } from './service/order-service.service';
+import { OrderListComponent } from './order-list/order-list.component';
+import { OrderFormComponent } from './order-form/order-form.component';
  
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    OrderListComponent,
+    OrderFormComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +25,7 @@ import { ProductService } from './service/product-service.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [ProductService],
+  providers: [ProductService, OrderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

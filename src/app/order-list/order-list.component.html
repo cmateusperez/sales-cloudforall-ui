@@ -1,0 +1,20 @@
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Factura</th>
+            <th scope="col">Sitio de entrega</th>
+            <th scope="col">Total de la compra</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let orderDetail of ordersDetail">
+            <td>{{ orderDetail.idInvoice }}</td>
+            <td>{{ orderDetail.deliverySite }}</td>
+            <td>{{ orderDetail.totalPurchases }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

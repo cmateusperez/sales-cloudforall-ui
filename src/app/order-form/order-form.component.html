@@ -1,0 +1,38 @@
+<div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #orderForm="ngForm">
+        <div class="form-group">
+          <label for="idPreOrder">Id PreOrden</label>
+          <input type="text" [(ngModel)]="order.idPreOrder" 
+            class="form-control" 
+            id="idPreOrder" 
+            name="idPreOrder" 
+            placeholder="Entrar su id preorden"
+            required #idPreOrder="ngModel">
+        </div>
+        <div [hidden]="!idPreOrder.pristine" class="alert alert-danger">Id preorden es requirido</div>
+        <div class="form-group">
+          <label for="idProduct">Id Producto</label>
+          <input type="text" [(ngModel)]="order.idProduct" 
+            class="form-control" 
+            id="idProduct" 
+            name="idProduct" 
+            placeholder="Enter su id producto"
+            required #idProduct="ngModel">
+          <div [hidden]="!idProduct.pristine" class="alert alert-danger">Id producto es requerido</div>
+        </div>
+        <div class="form-group">
+          <label for="quantity">Cantidad</label>
+          <input type="text" [(ngModel)]="order.quantity" 
+            class="form-control" 
+            id="quantity" 
+            name="quantity" 
+            placeholder="Enter cantidad del producto"
+            required #quantity="ngModel">
+          <div [hidden]="!quantity.pristine" class="alert alert-danger">Cantidad es requerida</div>
+        </div>
+        <button type="submit" [disabled]="!orderForm.form.valid" 
+          class="btn btn-info">Guardar</button>
+      </form>
+    </div>
+  </div>
